@@ -373,6 +373,10 @@ section[id], #photography { scroll-margin-top: 4.5rem; }
 /* Fully below the player so they miss the face, the play orb, and the caption. */
 .hero__stage .bubble--lg { width: 64px; height: 64px; right: -18px; bottom: -72px; }
 .hero__stage .bubble--sm { width: 28px; height: 28px; right: 56px; bottom: -64px; }
+@media (min-width: 1200px) {
+  .hero__stage .bubble--lg { width: 56px; height: 56px; right: -52px; bottom: 24px; }
+  .hero__stage .bubble--sm { width: 26px; height: 26px; right: -40px; bottom: 78px; }
+}
 @media (prefers-reduced-motion: no-preference) and (min-width: 761px) {
   .bubble { animation: drift 9s ease-in-out infinite alternate; }
   @keyframes drift { to { transform: translateY(-14px); } }
@@ -561,6 +565,10 @@ section[id], #photography { scroll-margin-top: 4.5rem; }
 .card--films .card__media { min-height: 16rem; border-radius: 0 0 0 var(--r-md); }
 .card--films .card__body { display: flex; flex-direction: column; justify-content: center; padding: 1.5rem 1.6rem 1.7rem; }
 .card--films .card__media .play { left: 1rem; bottom: 1rem; top: auto; right: auto; translate: none; }
+@media (min-width: 761px) {
+  .card--door .card__body,
+  .card--fan .card__body { padding-bottom: 6rem; }
+}
 .card--pogo { grid-column: span 4; min-height: 560px; }
 .card--door { grid-column: span 5; min-height: 440px; }
 .card--fan { grid-column: span 3; min-height: 440px; }
@@ -716,7 +724,7 @@ section[id], #photography { scroll-margin-top: 4.5rem; }
 .player__frame--tall { width: auto; height: min(78dvh, 760px); aspect-ratio: 9 / 16; margin: 0 auto; }
 .player:has(.player__frame--tall) { width: min(92vw, calc(min(78dvh, 760px) * 9 / 16)); }
 .player__foot {
-  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  display: flex; justify-content: flex-end; align-items: center; gap: 1.25rem;
   margin: 0; padding: .7rem .9rem; font: .75rem/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; background: var(--glass-dark-solid);
 }
 .player__foot a, .player__close-text { color: var(--paper); }
@@ -792,7 +800,7 @@ section[id], #photography { scroll-margin-top: 4.5rem; }
   .card--client { grid-column: span 12; }
   .card--photo { grid-template-columns: 1fr; }
   .collection { min-height: 320px; }
-  .window--player .window__meta { padding-left: 8.5rem; }
+  .window--player .window__meta { padding-left: 10.5rem; }
   .window--photo { width: 190px; left: -36px; }
 }
 @media (max-width: 760px) {

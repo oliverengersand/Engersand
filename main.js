@@ -124,33 +124,6 @@
     unlock();
     if (opener) opener.focus();
   });
-  /* A cross-origin player frame swallows Escape. Pull focus back to the dialog so the key reaches it. */
-  window.addEventListener("blur", function () {
-    if (!player.open) return;
-    window.setTimeout(function () {
-      var active = document.activeElement;
-      if (active && active.tagName === "IFRAME" && frame.contains(active)) {
-        var closeBtn = player.querySelector(".player__close");
-        if (closeBtn) closeBtn.focus();
-      }
-    }, 0);
-  });
-  player.addEventListener("keydown", function (e) {
-    if (e.key !== "Tab") return;
-    var items = Array.prototype.filter.call(player.querySelectorAll("button, a[href], iframe"), function (el) {
-      return !el.hidden;
-    });
-    if (!items.length) return;
-    var first = items[0];
-    var last = items[items.length - 1];
-    if (e.shiftKey && document.activeElement === first) {
-      e.preventDefault();
-      last.focus();
-    } else if (!e.shiftKey && document.activeElement === last) {
-      e.preventDefault();
-      first.focus();
-    }
-  });
 }
 
   /* Photo lightbox */
