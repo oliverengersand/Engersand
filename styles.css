@@ -339,9 +339,17 @@ section[id], #photography { scroll-margin-top: 4.5rem; }
   display: flex; width: max-content; margin: 0; padding: .85rem 0 .7rem;
   white-space: nowrap; font: .75rem/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--sky);
 }
+.marquee__track { display: flex; width: max-content; }
+.marquee__group {
+  display: flex; flex: none; margin: 0; padding: .85rem 0 .7rem; list-style: none;
+  white-space: nowrap; font: .75rem/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--sky);
+}
+.marquee__group li { flex: none; }
+.marquee__group li::after { content: "\2726"; margin: 0 .9em; }
 @media (prefers-reduced-motion: no-preference) {
   .marquee p { animation: marquee 40s linear infinite; }
-  @keyframes marquee { to { transform: translateX(-50%); } }
+  .marquee__track { animation: marquee 160s linear infinite; will-change: transform; }
+  @keyframes marquee { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
 }
 
 /* Hero operator photo stays a plain blue tint until the duotone is approved. */
@@ -491,6 +499,11 @@ section[id], #photography { scroll-margin-top: 4.5rem; }
   font: 400 .75rem/1 var(--mono); letter-spacing: .08em; text-transform: uppercase;
 }
 .preview-toggle[hidden] { display: none; }
+.toast {
+  position: fixed; left: 50%; bottom: 1.5rem; z-index: 50; translate: -50% 0; margin: 0;
+  padding: .6rem 1rem; border-radius: var(--r-pill); background: var(--night); color: var(--paper);
+  font: .8rem/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; box-shadow: 0 6px 24px rgba(0,0,0,.35);
+}
 
 /* SECTIONS */
 .reel, .work, .about, .contact, .cv { max-width: none; }
@@ -539,6 +552,7 @@ section[id], #photography { scroll-margin-top: 4.5rem; }
 .card__media { position: relative; overflow: hidden; background: #000; border-radius: 0 0 var(--r-md) var(--r-md); }
 .card__media > .play-link { position: relative; display: block; width: 100%; height: 100%; color: var(--paper); background: #000; }
 .card__media img, .card__media > .play-link img { width: 100%; height: 100%; object-fit: cover; }
+.films__still { object-position: 62% 50%; }
 .card__media img { transition: transform var(--dur-slow) var(--ease); }
 @media (prefers-reduced-motion: no-preference) and (hover: hover) {
   .card:hover .card__media img { transform: scale(1.03); }
@@ -659,7 +673,7 @@ section[id], #photography { scroll-margin-top: 4.5rem; }
 }
 .contact__title em { color: var(--blue); }
 .contact__text { color: var(--ink); max-width: 58ch; margin: 0 0 1.75rem; }
-.contact__actions { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
+.contact__actions, .mail-actions { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
 .contact__actions .btn { overflow-wrap: anywhere; white-space: normal; text-align: center; max-width: 100%; height: auto; padding-block: .75rem; }
 .contact .bubble { z-index: 0; }
 

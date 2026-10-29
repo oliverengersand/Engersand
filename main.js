@@ -17,6 +17,7 @@
 
   function loadGalleries() {
     if (galleries) return Promise.resolve(galleries);
+    if (window.GALLERIES) { galleries = window.GALLERIES; return Promise.resolve(galleries); }
     return fetch("assets/photos/galleries.json").then(function (r) {
       if (!r.ok) throw new Error("gallery");
       return r.json();
@@ -269,4 +270,38 @@
       });
     });
   }
+
+  /* Copy email fallback for machines with no mail app. */
+  const toast = document.querySelector(".toast");
+  let toastTimer = 0;
+  function say(msg) {
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toast.hidden = true; }, 2200);
+  }
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
+    return new Promise(function (ok, fail) {
+      const t = document.createElement("textarea");
+      t.value = text;
+      t.setAttribute("readonly", "");
+      t.style.position = "fixed";
+      t.style.opacity = "0";
+      document.body.appendChild(t);
+      t.select();
+      const done = document.execCommand("copy");
+      t.remove();
+      done ? ok() : fail();
+    });
+  }
+  document.querySelectorAll("[data-copy]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      copyText(b.dataset.copy).then(
+        function () { say("Copied " + b.dataset.copy); },
+        function () { say("Couldn't copy. The address is " + b.dataset.copy); }
+      );
+    });
+  });
 })();

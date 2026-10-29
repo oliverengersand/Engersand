@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preload" href="assets/fonts/instrument-serif-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="assets/photos/galleries.js" defer></script>
   <script src="main.js" defer></script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Person","name":"Oliver Engersand","jobTitle":"Video editor and filmmaker","url":"https://oliverengersand.github.io/Engersand/","email":"mailto:oliverengersand@gmail.com","sameAs":["https://www.youtube.com/@Engersand"]}
@@ -89,7 +90,22 @@
           <span class="bubble bubble--sm" aria-hidden="true"></span>
         </div>
       </div>
-      <div class="marquee strip--checker" aria-hidden="true"><p><span>Premiere Pro ✦ After Effects ✦ Photoshop ✦ Lightroom ✦ Multi-camera ✦ Short films ✦ VFX ✦ Social media content ✦&nbsp;</span><span>Premiere Pro ✦ After Effects ✦ Photoshop ✦ Lightroom ✦ Multi-camera ✦ Short films ✦ VFX ✦ Social media content ✦&nbsp;</span></p></div>
+      <div class="marquee strip--checker" aria-hidden="true">
+        <div class="marquee__track">
+          <ul class="marquee__group">
+            <li>Premiere Pro</li><li>After Effects</li><li>Photoshop</li><li>Lightroom</li><li>Multi-camera</li><li>Short films</li><li>VFX</li><li>Social media content</li>
+            <li>Premiere Pro</li><li>After Effects</li><li>Photoshop</li><li>Lightroom</li><li>Multi-camera</li><li>Short films</li><li>VFX</li><li>Social media content</li>
+            <li>Premiere Pro</li><li>After Effects</li><li>Photoshop</li><li>Lightroom</li><li>Multi-camera</li><li>Short films</li><li>VFX</li><li>Social media content</li>
+            <li>Premiere Pro</li><li>After Effects</li><li>Photoshop</li><li>Lightroom</li><li>Multi-camera</li><li>Short films</li><li>VFX</li><li>Social media content</li>
+          </ul>
+          <ul class="marquee__group">
+            <li>Premiere Pro</li><li>After Effects</li><li>Photoshop</li><li>Lightroom</li><li>Multi-camera</li><li>Short films</li><li>VFX</li><li>Social media content</li>
+            <li>Premiere Pro</li><li>After Effects</li><li>Photoshop</li><li>Lightroom</li><li>Multi-camera</li><li>Short films</li><li>VFX</li><li>Social media content</li>
+            <li>Premiere Pro</li><li>After Effects</li><li>Photoshop</li><li>Lightroom</li><li>Multi-camera</li><li>Short films</li><li>VFX</li><li>Social media content</li>
+            <li>Premiere Pro</li><li>After Effects</li><li>Photoshop</li><li>Lightroom</li><li>Multi-camera</li><li>Short films</li><li>VFX</li><li>Social media content</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section class="reel surface--night" id="film" aria-labelledby="reel-title">
@@ -135,7 +151,7 @@
             <div class="window__bar" aria-hidden="true"><span class="window__title">short_films/</span><span class="window__dots"><i></i><i></i><i></i></span></div>
             <div class="card__media">
               <a class="play-link" href="https://www.youtube.com/watch?v=o310hP-DcL8" data-yt="o310hP-DcL8" data-ratio="16/9" data-title="Dissociation" aria-label="Play Dissociation">
-                <img src="assets/video/dissociation.webp" alt="Still from Dissociation: two young men in suits at a restaurant table" width="640" height="290" loading="lazy">
+                <img class="films__still" src="assets/video/dissociation-1280.webp" srcset="assets/video/dissociation-828.webp 828w, assets/video/dissociation-1280.webp 1280w, assets/video/dissociation-1920.webp 1920w" sizes="(max-width: 760px) 100vw, 480px" alt="Two hands touching near a snowy concrete floor at night, from Dissociation" width="1280" height="720" loading="lazy">
                 <span class="play" aria-hidden="true"></span>
               </a>
             </div>
@@ -264,7 +280,10 @@
           <ul class="tools" aria-label="Tools">
             <li>Premiere Pro</li><li>After Effects</li><li>Photoshop</li><li>Lightroom</li><li>Multi-camera</li>
           </ul>
-          <a class="btn btn--bubble" href="mailto:oliverengersand@gmail.com?subject=CV%20request">Request my CV</a>
+          <div class="mail-actions">
+            <a class="btn btn--bubble" href="mailto:oliverengersand@gmail.com?subject=CV%20request&amp;body=Hi%20Oliver%2C%0A%0ACould%20you%20send%20me%20your%20CV%3F%0A%0AName%3A%20%0ACompany%3A%20%0A%0AThanks%21">Request my CV</a>
+            <button class="btn btn--glass copy-email" type="button" data-copy="oliverengersand@gmail.com">Copy email</button>
+          </div>
         </div>
       </div>
     </section>
@@ -280,6 +299,7 @@
           <p class="contact__text">I'm open to freelance work and work placements, whether that's video editing, filming or social media content. If you have a project or a question, send me an email and I'll get back to you.</p>
           <div class="contact__actions">
             <a class="btn btn--bubble" href="mailto:oliverengersand@gmail.com">oliverengersand@gmail.com</a>
+            <button class="btn btn--glass btn--on-light copy-email" type="button" data-copy="oliverengersand@gmail.com">Copy email</button>
             <a class="btn btn--glass btn--on-light" href="https://www.youtube.com/@Engersand" rel="me">YouTube</a>
           </div>
         </div>
@@ -327,5 +347,6 @@
       </p>
     </div>
   </dialog>
+  <p class="toast" role="status" aria-live="polite" hidden></p>
 </body>
 </html>
