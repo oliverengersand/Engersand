@@ -102,18 +102,56 @@
         frame.replaceChildren(f);
         ttl.textContent = name.toLowerCase().replace(/\s+/g, "_") + ".mp4";
         out.href = a.href;
-        openDialog(player);
-        player.querySelector(".player__close").focus();
-      });
+      openDialog(player);
+      player.querySelector(".player__close").focus();
     });
-    player.querySelector(".player__close").addEventListener("click", function () { player.close(); });
-    player.addEventListener("click", function (e) { if (e.target === player) player.close(); });
-    player.addEventListener("close", function () {
+  });
+  function closePlayer() {
+    if (typeof player.close === "function" && player.open) player.close();
+    else {
+      player.removeAttribute("open");
       frame.replaceChildren();
       unlock();
       if (opener) opener.focus();
-    });
+    }
   }
+  player.querySelectorAll(".player__close, .player__close-text").forEach(function (btn) {
+    btn.addEventListener("click", closePlayer);
+  });
+  player.addEventListener("click", function (e) { if (e.target === player) closePlayer(); });
+  player.addEventListener("close", function () {
+    frame.replaceChildren();
+    unlock();
+    if (opener) opener.focus();
+  });
+  /* A cross-origin player frame swallows Escape. Pull focus back to the dialog so the key reaches it. */
+  window.addEventListener("blur", function () {
+    if (!player.open) return;
+    window.setTimeout(function () {
+      var active = document.activeElement;
+      if (active && active.tagName === "IFRAME" && frame.contains(active)) {
+        var closeBtn = player.querySelector(".player__close");
+        if (closeBtn) closeBtn.focus();
+      }
+    }, 0);
+  });
+  player.addEventListener("keydown", function (e) {
+    if (e.key !== "Tab") return;
+    var items = Array.prototype.filter.call(player.querySelectorAll("button, a[href], iframe"), function (el) {
+      return !el.hidden;
+    });
+    if (!items.length) return;
+    var first = items[0];
+    var last = items[items.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
+}
 
   /* Photo lightbox */
   const lb = document.getElementById("lightbox");

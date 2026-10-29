@@ -68,7 +68,10 @@
           <div class="window window--glass window--player hud">
             <div class="window__bar"><span class="window__title">schizomann_preview.mp4</span><span class="window__dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
             <div class="window__screen scanlines">
-              <img class="hero__poster" src="assets/video/schizomann-1280.webp" srcset="assets/video/schizomann-828.webp 828w, assets/video/schizomann-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 55vw" alt="" width="1280" height="720" fetchpriority="high">
+              <a class="play-link hero__hit" href="https://www.youtube.com/watch?v=Q04KvQcQIoU" data-yt="Q04KvQcQIoU" data-ratio="16/9" data-title="SCHIZOMANN" aria-label="Play SCHIZOMANN">
+                <img class="hero__poster" src="assets/video/schizomann-1280.webp" srcset="assets/video/schizomann-828.webp 828w, assets/video/schizomann-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 55vw" alt="" width="1280" height="720" fetchpriority="high">
+                <span class="play" aria-hidden="true"></span>
+              </a>
               <video class="hero__video" muted loop playsinline preload="none" width="1280" height="720" aria-hidden="true" data-webm="" data-mp4=""></video>
               <span class="tag tag--burgundy">[ Now playing ]</span>
               <button class="preview-toggle" type="button" aria-pressed="true" hidden>Pause preview</button>
@@ -315,7 +318,10 @@
         <button class="player__close btn--orb" type="button" aria-label="Close video"><span aria-hidden="true">×</span></button>
       </div>
       <div class="player__frame"></div>
-      <p class="player__foot"><a class="player__out" href="#">Open on YouTube <span aria-hidden="true">↗</span></a></p>
+      <p class="player__foot">
+        <button class="player__close-text" type="button">Close</button>
+        <a class="player__out" href="#">Open on YouTube <span aria-hidden="true">↗</span></a>
+      </p>
     </div>
   </dialog>
 </body>
