@@ -5,215 +5,298 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Oliver Engersand | Video editor and filmmaker</title>
   <meta name="description" content="Video editor and filmmaker from Norway. Short films, editing, After Effects work and social media content. Open for freelance work and work placements.">
-  <link rel="icon" href="data:,">
-  <meta name="theme-color" content="#3B0A12">
+  <link rel="canonical" href="https://oliverengersand.github.io/Engersand/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#0E15E4">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Oliver Engersand">
   <meta property="og:title" content="Oliver Engersand | Video editor and filmmaker">
   <meta property="og:description" content="Short films, editing and VFX. Open for freelance work and work placements.">
-  <meta property="og:image" content="assets/hero-a.webp">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-  <link rel="preload" as="image" href="assets/hero-a.webp">
+  <meta property="og:url" content="https://oliverengersand.github.io/Engersand/">
+  <meta property="og:image" content="https://oliverengersand.github.io/Engersand/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Oliver Engersand, video editor and filmmaker, in electric blue with a sparkle star">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" as="image" href="assets/video/schizomann-828.webp" imagesrcset="assets/video/schizomann-828.webp 828w, assets/video/schizomann-1280.webp 1280w" imagesizes="(max-width: 760px) 100vw, 55vw" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preload" href="assets/fonts/instrument-serif-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
   <script src="main.js" defer></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Oliver Engersand","jobTitle":"Video editor and filmmaker","url":"https://oliverengersand.github.io/Engersand/","email":"mailto:oliverengersand@gmail.com","sameAs":["https://www.youtube.com/@Engersand"]}
+  </script>
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="spark" viewBox="0 0 100 100"><path d="M50 0C55 45 55 45 100 50C55 55 55 55 50 100C45 55 45 55 0 50C45 45 45 45 50 0Z"/></symbol>
+  </svg>
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <a class="wordmark" href="#top" aria-label="Oliver Engersand, home">Oliver Engersand</a>
+    <a class="wordmark" href="#top" aria-label="Oliver Engersand, home">
+      <svg class="sparkle sparkle--inline" viewBox="0 0 100 100" aria-hidden="true"><use href="#spark"/></svg>Oliver Engersand
+    </a>
     <nav aria-label="Main">
       <ul>
         <li><a href="#work">Work</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a class="nav-yt" href="https://www.youtube.com/@Engersand" rel="me">YouTube</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
-    <!-- HERO -->
-    <section class="hero hero--a" id="top" aria-labelledby="hero-title">
-      <div class="hero__bg" aria-hidden="true">
-        <img src="assets/hero-a.webp" alt="" width="1920" height="1280" fetchpriority="high">
-      </div>
+    <section class="hero surface--blue halftone" id="top" aria-labelledby="hero-title">
+      <svg class="sparkle sparkle--xl" viewBox="0 0 100 100" aria-hidden="true"><use href="#spark"/></svg>
+      <svg class="sparkle sparkle--sm" viewBox="0 0 100 100" aria-hidden="true"><use href="#spark"/></svg>
       <div class="hero__inner">
-        <p class="eyebrow"><span class="rec" aria-hidden="true"></span>Portfolio · Norway</p>
-        <h1 id="hero-title" class="hero__title">Oliver<br><em>Engersand</em></h1>
-        <p class="hero__lede">Video editor &amp; filmmaker. Short films, editing and VFX.</p>
-        <div class="hero__actions">
-          <a class="btn btn--solid" href="#work">See my work</a>
-          <a class="btn btn--ghost" href="#contact">Get in touch</a>
+        <div class="hero__copy">
+          <p class="hud-data" aria-hidden="true"><span>Portfolio_2026</span><span>Edit // VFX // Film</span><span>NO 60°N</span></p>
+          <p class="status"><span class="rec" aria-hidden="true"></span>Portfolio · Norway</p>
+          <h1 id="hero-title" class="hero__title chrome-text">Oliver <em>Engersand</em></h1>
+          <p class="hero__lede">Video editor &amp; filmmaker. Short films, editing and VFX.</p>
+          <div class="hero__actions">
+            <a class="btn btn--bubble play-link" href="https://www.youtube.com/watch?v=Q04KvQcQIoU" data-yt="Q04KvQcQIoU" data-ratio="16/9" data-title="SCHIZOMANN"><span class="tri" aria-hidden="true"></span>Watch SCHIZOMANN</a>
+            <a class="btn btn--glass" href="#work">See my work</a>
+          </div>
+        </div>
+
+        <div class="hero__stage">
+          <div class="window window--glass window--player hud">
+            <div class="window__bar"><span class="window__title">schizomann_preview.mp4</span><span class="window__dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+            <div class="window__screen scanlines">
+              <img class="hero__poster" src="assets/video/schizomann-1280.webp" srcset="assets/video/schizomann-828.webp 828w, assets/video/schizomann-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 55vw" alt="" width="1280" height="720" fetchpriority="high">
+              <video class="hero__video" muted loop playsinline preload="none" width="1280" height="720" aria-hidden="true" data-webm="" data-mp4=""></video>
+              <span class="tag tag--burgundy">[ Now playing ]</span>
+              <button class="preview-toggle" type="button" aria-pressed="true" hidden>Pause preview</button>
+            </div>
+            <p class="window__meta"><span>SCHIZOMANN <b>// short film</b></span><span>Writer, director, camera, editor</span></p>
+          </div>
+          <figure class="window window--photo tint" aria-hidden="true">
+            <div class="window__bar"><span class="window__title">operator.jpg</span><span class="window__dots"><i></i><i></i><i></i></span></div>
+            <picture>
+              <source media="(max-width: 760px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACw=">
+              <img src="assets/hero-a-640.webp" alt="" width="640" height="426">
+            </picture>
+          </figure>
+          <span class="bubble bubble--lg" aria-hidden="true"></span>
+          <span class="bubble bubble--sm" aria-hidden="true"></span>
+        </div>
+      </div>
+      <div class="marquee strip--checker" aria-hidden="true"><p><span>Premiere Pro ✦ After Effects ✦ Photoshop ✦ Lightroom ✦ Multi-camera ✦ Short films ✦ VFX ✦ Social media content ✦&nbsp;</span><span>Premiere Pro ✦ After Effects ✦ Photoshop ✦ Lightroom ✦ Multi-camera ✦ Short films ✦ VFX ✦ Social media content ✦&nbsp;</span></p></div>
+    </section>
+
+    <section class="reel surface--night" id="film" aria-labelledby="reel-title">
+      <div class="reel__inner">
+        <div class="section-head">
+          <p class="label"><span class="label__no">00</span>Featured film</p>
+          <p class="reel__meta" aria-hidden="true">REC ● 16:9 // short film</p>
+        </div>
+        <div class="reel__grid">
+          <div class="window window--solid hud reel__slot">
+            <div class="window__bar" aria-hidden="true"><span class="window__title">schizomann_final.mp4</span><span class="window__dots"><i></i><i></i><i></i></span></div>
+            <a class="play-link" href="https://www.youtube.com/watch?v=Q04KvQcQIoU" data-yt="Q04KvQcQIoU" data-ratio="16/9" data-title="SCHIZOMANN" aria-label="Play SCHIZOMANN">
+              <img src="assets/video/schizomann-1280.webp" srcset="assets/video/schizomann-828.webp 828w, assets/video/schizomann-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 60vw" alt="SCHIZOMANN title card: an actor holds up a pineapple in front of a wide field" width="1280" height="720" loading="lazy">
+              <span class="play" aria-hidden="true"></span>
+            </a>
+          </div>
+          <div class="reel__caption">
+            <h2 id="reel-title" class="section-title">SCHIZOMANN</h2>
+            <dl class="spec-sheet">
+              <div><dt>Role</dt><dd>Writer, director, camera, editor</dd></div>
+              <div><dt>Type</dt><dd>Short film, solo project</dd></div>
+            </dl>
+            <a class="btn btn--bubble play-link" href="https://www.youtube.com/watch?v=Q04KvQcQIoU" data-yt="Q04KvQcQIoU" data-ratio="16/9" data-title="SCHIZOMANN"><span class="tri" aria-hidden="true"></span>Play film</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- FEATURED FILM (takes the showreel slot until a reel exists) -->
-    <section class="reel" aria-labelledby="reel-title">
-      <div class="section-head">
-        <p class="label"><span class="label__no">00</span>Featured film</p>
-        <p class="reel__meta">SCHIZOMANN · Short film</p>
-      </div>
-      <h2 id="reel-title" class="sr-only">Featured film: SCHIZOMANN</h2>
-      <div class="reel__slot">
-        <a class="play-link" href="https://www.youtube.com/watch?v=Q04KvQcQIoU" target="_blank" rel="noopener noreferrer" aria-label="Watch SCHIZOMANN on YouTube (opens in a new tab)">
-          <img src="assets/video/schizomann.webp" alt="SCHIZOMANN title card: an actor holds up a pineapple in front of a wide field" width="1280" height="720" loading="lazy">
-          <span class="play" aria-hidden="true"></span>
-        </a>
+    <div class="strip strip--checker" aria-hidden="true"></div>
+
+    <section class="work surface--paper" id="work" aria-labelledby="work-title">
+      <div class="work__inner">
+        <div class="section-head">
+          <p class="label"><span class="label__no">01</span>Selected work</p>
+          <h2 id="work-title" class="section-title">Featured <em>work</em></h2>
+        </div>
+
+        <div class="grid">
+          <article class="card card--films window window--solid hud">
+            <div class="window__bar" aria-hidden="true"><span class="window__title">short_films/</span><span class="window__dots"><i></i><i></i><i></i></span></div>
+            <div class="card__media">
+              <a class="play-link" href="https://www.youtube.com/watch?v=o310hP-DcL8" data-yt="o310hP-DcL8" data-ratio="16/9" data-title="Dissociation" aria-label="Play Dissociation">
+                <img src="assets/video/dissociation.webp" alt="Still from Dissociation: two young men in suits at a restaurant table" width="640" height="290" loading="lazy">
+                <span class="play" aria-hidden="true"></span>
+              </a>
+            </div>
+            <div class="card__body">
+              <p class="card__kicker">Short films</p>
+              <h3 class="card__title">Short Films</h3>
+              <p class="card__text">Two short films I've written, directed, shot and edited. SCHIZOMANN is a solo project, and Dissociation was a joint project for Amandusfestivalen 2025.</p>
+              <ol class="films">
+                <li><a class="films__name play-link" href="https://www.youtube.com/watch?v=Q04KvQcQIoU" data-yt="Q04KvQcQIoU" data-ratio="16/9" data-title="SCHIZOMANN">SCHIZOMANN</a><span class="films__role">Writer, director, camera, editor · solo project</span></li>
+                <li><a class="films__name play-link" href="https://www.youtube.com/watch?v=o310hP-DcL8" data-yt="o310hP-DcL8" data-ratio="16/9" data-title="Dissociation">Dissociation</a><span class="films__role">Amandusfestivalen 2025 · co-writer, co-director, camera, editor</span></li>
+              </ol>
+            </div>
+          </article>
+
+          <article class="card card--pogo card--overlay window window--solid hud">
+            <div class="window__bar" aria-hidden="true"><span class="window__title">pogo_v3.mp4</span><span class="window__dots"><i></i><i></i><i></i></span></div>
+            <div class="card__media">
+              <a class="play-link" href="https://www.youtube.com/shorts/apdZgecUBRk" data-yt="apdZgecUBRk" data-ratio="9/16" data-title="POGO v3" aria-label="Play POGO v3">
+                <img src="assets/video/pogo-v3.webp" alt="Oliver climbing a Kilter Board wall" width="405" height="720" loading="lazy">
+                <span class="play" aria-hidden="true"></span>
+              </a>
+            </div>
+            <div class="card__body">
+              <p class="card__kicker">Editing · Premiere Pro</p>
+              <h3 class="card__title">POGO v3</h3>
+              <p class="card__text">A dynamic move on the Kilter Board, opening with an effect I made myself. I filmed and edited it, and I'm also the climber.</p>
+            </div>
+          </article>
+
+          <article class="card card--door card--overlay window window--solid hud">
+            <div class="window__bar" aria-hidden="true"><span class="window__title">door_void.mp4</span><span class="window__dots"><i></i><i></i><i></i></span></div>
+            <div class="card__media">
+              <a class="play-link" href="https://www.youtube.com/watch?v=pj3B94RxHgk" data-yt="pj3B94RxHgk" data-ratio="16/9" data-title="Door Void" aria-label="Play Door Void">
+                <img src="assets/video/door-void.webp" srcset="assets/video/door-void-640.webp 640w, assets/video/door-void.webp 1280w" sizes="(max-width: 760px) 100vw, 40vw" alt="Dark doors floating in a bright white void" width="1280" height="720" loading="lazy">
+                <span class="play" aria-hidden="true"></span>
+              </a>
+            </div>
+            <div class="card__body">
+              <p class="card__kicker">VFX · After Effects</p>
+              <h3 class="card__title">Door Void</h3>
+              <p class="card__text">An After Effects piece: an empty void, filled with doors.</p>
+            </div>
+          </article>
+
+          <article class="card card--fan card--overlay window window--solid hud">
+            <div class="window__bar" aria-hidden="true"><span class="window__title">notafan.mp4</span><span class="window__dots"><i></i><i></i><i></i></span></div>
+            <div class="card__media">
+              <a class="play-link" href="https://www.youtube.com/shorts/AHKkr0LKCfI" data-yt="AHKkr0LKCfI" data-ratio="9/16" data-title="NotAFan" aria-label="Play NotAFan">
+                <img src="assets/video/notafan.webp" alt="A pixelated white desk fan with the words Prepare to die, fool" width="405" height="720" loading="lazy">
+                <span class="play" aria-hidden="true"></span>
+              </a>
+            </div>
+            <div class="card__body">
+              <p class="card__kicker">Edit &amp; VFX · After Effects</p>
+              <h3 class="card__title">NotAFan</h3>
+              <p class="card__text">A low-res, stylised fight against a fan, with JoJo 2D fighting-game sound effects. Editor, VFX and performer.</p>
+            </div>
+          </article>
+
+          <article class="card card--client window window--solid hud">
+            <div class="window__bar" aria-hidden="true"><span class="window__title">homesync_as.txt</span><span class="window__dots"><i></i><i></i><i></i></span></div>
+            <div class="card__body">
+              <p class="card__kicker">Client case study</p>
+              <h3 class="card__title">Homesync AS</h3>
+              <p class="client__period" aria-hidden="true">NOV 2025 <span>→</span> AUG 2026</p>
+              <p class="card__text">Content producer, videographer and video editor for a Norwegian smart-home online store. I made short-form social media content and handled everything from ideas and planning to filming, editing, captions, sound and graphics.</p>
+              <dl class="facts">
+                <div class="sr-only"><dt>Period</dt><dd>Nov 2025 to Aug 2026</dd></div>
+                <div><dt>Deliverables</dt><dd>Reels, Stories &amp; short-form video</dd></div>
+              </dl>
+              <p class="card__note">Work certificate available on request.</p>
+            </div>
+          </article>
+
+          <article class="card card--photo window window--solid hud" id="photography">
+            <div class="window__bar" aria-hidden="true"><span class="window__title">photography/</span><span class="window__dots"><i></i><i></i><i></i></span></div>
+            <div class="card__body">
+              <p class="card__kicker">Photography</p>
+              <h3 class="card__title">Photography</h3>
+              <p class="card__text">Three series: Street, Fog and Bouldering. Open one to see the full set.</p>
+            </div>
+            <ul class="collections">
+              <li>
+                <a class="collection" href="assets/photos/street/street-01.webp" data-collection="street" aria-label="Open Street series, 24 photos">
+                  <span class="collection__media hud"><img src="assets/photos/street/street-01-thumb.webp" alt="" width="720" height="480" loading="lazy"></span>
+                  <span class="tag">24 photos</span>
+                  <span class="collection__info"><span class="collection__title">Street</span></span>
+                </a>
+              </li>
+              <li>
+                <a class="collection" href="assets/photos/fog/fog-01.webp" data-collection="fog" aria-label="Open Fog series, 18 photos">
+                  <span class="collection__media hud"><img src="assets/photos/fog/fog-01-thumb.webp" alt="" width="480" height="720" loading="lazy"></span>
+                  <span class="tag">18 photos</span>
+                  <span class="collection__info"><span class="collection__title">Fog</span></span>
+                </a>
+              </li>
+              <li>
+                <a class="collection" href="assets/photos/bouldering/bouldering-01.webp" data-collection="bouldering" aria-label="Open Bouldering series, 28 photos">
+                  <span class="collection__media hud"><img src="assets/photos/bouldering/bouldering-01-thumb.webp" alt="" width="720" height="480" loading="lazy"></span>
+                  <span class="tag">28 photos</span>
+                  <span class="collection__info"><span class="collection__title">Bouldering</span></span>
+                </a>
+              </li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- WORK -->
-    <section class="work" id="work" aria-labelledby="work-title">
-      <div class="section-head">
-        <p class="label"><span class="label__no">01</span>Selected work</p>
-        <h2 id="work-title" class="section-title">Featured <em>work</em></h2>
-      </div>
+    <div class="strip strip--checker" aria-hidden="true"></div>
 
-      <div class="grid">
-        <article class="card card--films">
-          <div class="card__media">
-            <a class="play-link" href="https://www.youtube.com/watch?v=o310hP-DcL8" target="_blank" rel="noopener noreferrer" aria-label="Watch Dissociation on YouTube (opens in a new tab)">
-              <img src="assets/video/dissociation.webp" alt="Still from Dissociation: two young men in suits at a restaurant table" width="640" height="290" loading="lazy">
-              <span class="play" aria-hidden="true"></span>
-            </a>
+    <section class="about surface--night" id="about" aria-labelledby="about-title">
+      <div class="about__grid">
+        <figure class="about__portrait collage hud">
+          <div class="duotone about__photo">
+            <img src="assets/portrait.webp" alt="Portrait of Oliver Engersand" width="800" height="1000" loading="lazy">
           </div>
-          <div class="card__body">
-            <p class="card__kicker">Short films</p>
-            <h3 class="card__title">Short Films</h3>
-            <p class="card__text">Two short films I've written, directed, shot and edited. SCHIZOMANN is a solo project, and Dissociation was a joint project for Amandusfestivalen 2025.</p>
-            <ol class="films">
-              <li><a class="films__name" href="https://www.youtube.com/watch?v=Q04KvQcQIoU" target="_blank" rel="noopener noreferrer">SCHIZOMANN</a><span class="films__role">Writer, director, camera, editor · solo project</span></li>
-              <li><a class="films__name" href="https://www.youtube.com/watch?v=o310hP-DcL8" target="_blank" rel="noopener noreferrer">Dissociation</a><span class="films__role">Amandusfestivalen 2025 · co-writer, co-director, camera, editor</span></li>
-            </ol>
-          </div>
-        </article>
-
-        <article class="card card--pogo card--overlay">
-          <div class="card__media">
-            <a class="play-link" href="https://www.youtube.com/shorts/apdZgecUBRk" target="_blank" rel="noopener noreferrer" aria-label="Watch POGO v3 on YouTube (opens in a new tab)">
-              <img src="assets/video/pogo-v3.webp" alt="Oliver climbing a Kilter Board wall" width="405" height="720" loading="lazy">
-              <span class="play" aria-hidden="true"></span>
-            </a>
-          </div>
-          <div class="card__body">
-            <p class="card__kicker">Editing · Premiere Pro</p>
-            <h3 class="card__title">POGO v3</h3>
-            <p class="card__text">A dynamic move on the Kilter Board, opening with an effect I made myself. I filmed and edited it, and I'm also the climber.</p>
-          </div>
-        </article>
-
-        <article class="card card--door card--overlay">
-          <div class="card__media">
-            <a class="play-link" href="https://www.youtube.com/watch?v=pj3B94RxHgk" target="_blank" rel="noopener noreferrer" aria-label="Watch Door Void on YouTube (opens in a new tab)">
-              <img src="assets/video/door-void.webp" alt="Dark doors floating in a bright white void" width="1280" height="720" loading="lazy">
-              <span class="play" aria-hidden="true"></span>
-            </a>
-          </div>
-          <div class="card__body">
-            <p class="card__kicker">VFX · After Effects</p>
-            <h3 class="card__title">Door Void</h3>
-            <p class="card__text">An After Effects piece: an empty void, filled with doors.</p>
-          </div>
-        </article>
-
-        <article class="card card--fan card--overlay">
-          <div class="card__media">
-            <a class="play-link" href="https://www.youtube.com/shorts/AHKkr0LKCfI" target="_blank" rel="noopener noreferrer" aria-label="Watch NotAFan on YouTube (opens in a new tab)">
-              <img src="assets/video/notafan.webp" alt="A pixelated white desk fan with the words Prepare to die, fool" width="405" height="720" loading="lazy">
-              <span class="play" aria-hidden="true"></span>
-            </a>
-          </div>
-          <div class="card__body">
-            <p class="card__kicker">Edit &amp; VFX · After Effects</p>
-            <h3 class="card__title">NotAFan</h3>
-            <p class="card__text">A low-res, stylised fight against a fan, with JoJo 2D fighting-game sound effects. Editor, VFX and performer.</p>
-          </div>
-        </article>
-
-        <article class="card card--client">
-          <div class="card__body">
-            <p class="card__kicker">Client case study</p>
-            <h3 class="card__title">Homesync AS</h3>
-            <p class="card__text">Content producer, videographer and video editor for a Norwegian smart-home online store. I made short-form social media content and handled everything from ideas and planning to filming, editing, captions, sound and graphics.</p>
-            <dl class="facts">
-              <div><dt>Period</dt><dd>Nov 2025 to Aug 2026</dd></div>
-              <div><dt>Deliverables</dt><dd>Reels, Stories &amp; short-form video</dd></div>
-            </dl>
-            <p class="card__note">Work certificate available on request.</p>
-          </div>
-        </article>
-
-        <article class="card card--photo" id="photography">
-          <div class="card__body">
-            <p class="card__kicker">Photography</p>
-            <h3 class="card__title">Photography</h3>
-            <p class="card__text">Three series: Street, Fog and Bouldering. Open one to see the full set.</p>
-          </div>
-          <ul class="collections">
-            <li>
-              <a class="collection" href="assets/photos/street/street-01.webp" data-collection="street">
-                <span class="collection__media"><img src="assets/photos/street/street-01-thumb.webp" alt="" width="720" height="480" loading="lazy"></span>
-                <span class="collection__info"><span class="collection__title">Street</span><span class="collection__count">24 photos</span></span>
-              </a>
-            </li>
-            <li>
-              <a class="collection" href="assets/photos/fog/fog-01.webp" data-collection="fog">
-                <span class="collection__media"><img src="assets/photos/fog/fog-01-thumb.webp" alt="" width="480" height="720" loading="lazy"></span>
-                <span class="collection__info"><span class="collection__title">Fog</span><span class="collection__count">18 photos</span></span>
-              </a>
-            </li>
-            <li>
-              <a class="collection" href="assets/photos/bouldering/bouldering-01.webp" data-collection="bouldering">
-                <span class="collection__media"><img src="assets/photos/bouldering/bouldering-01-thumb.webp" alt="" width="720" height="480" loading="lazy"></span>
-                <span class="collection__info"><span class="collection__title">Bouldering</span><span class="collection__count">28 photos</span></span>
-              </a>
-            </li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <div class="band band--light">
-      <section class="about" id="about" aria-labelledby="about-title">
-        <figure class="about__portrait">
-          <img src="assets/portrait.webp" alt="Portrait of Oliver Engersand" width="800" height="1000" loading="lazy">
+          <span class="tag tag--blue collage__tag" aria-hidden="true">Subject: O. Engersand</span>
+          <svg class="sparkle collage__spark" viewBox="0 0 100 100" aria-hidden="true"><use href="#spark"/></svg>
         </figure>
         <div class="about__text">
           <p class="label"><span class="label__no">02</span>About</p>
-          <h2 id="about-title" class="section-title">Editing since <em>2022</em></h2>
+          <h2 id="about-title" class="section-title chrome-text chrome-text--dark">Editing since <em>2022</em></h2>
           <p>I'm Oliver Engersand, a media production student at Nannestad VGS, graduating in June 2027. I love making films and editing video, and I've been editing since 2022.</p>
           <p>I've done freelance editing for YouTube, made short films, and worked as a social media producer for Homesync AS. I also do multi-camera work, including on Global Gathering and the Gullklumpen film festival.</p>
           <ul class="tools" aria-label="Tools">
             <li>Premiere Pro</li><li>After Effects</li><li>Photoshop</li><li>Lightroom</li><li>Multi-camera</li>
           </ul>
-          <!-- PLACEHOLDER: about.html not built yet -->
-          <a class="link-arrow" href="#about">About &amp; CV <span aria-hidden="true">→</span></a>
+          <a class="btn btn--bubble" href="mailto:oliverengersand@gmail.com?subject=CV%20request">Request my CV</a>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
 
-    <!-- CONTACT -->
-    <section class="contact" id="contact" aria-labelledby="contact-title">
-      <p class="label"><span class="label__no">03</span>Contact</p>
-      <h2 id="contact-title" class="contact__title">Let's work <em>together</em></h2>
-      <p class="contact__text">I'm open to freelance work and work placements, whether that's video editing, filming or social media content. If you have a project or a question, send me an email and I'll get back to you.</p>
-      <a class="contact__mail" href="mailto:oliverengersand@gmail.com">oliverengersand@gmail.com</a>
+    <div class="strip strip--checker" aria-hidden="true"></div>
+
+    <section class="contact surface--sky" id="contact" aria-labelledby="contact-title">
+      <div class="contact__panel window window--glass">
+        <div class="window__bar"><span class="window__title">new_message.eml</span><span class="window__dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="contact__body">
+          <p class="label"><span class="label__no">03</span>Contact</p>
+          <h2 id="contact-title" class="contact__title">Let's work <em>together</em></h2>
+          <p class="contact__text">I'm open to freelance work and work placements, whether that's video editing, filming or social media content. If you have a project or a question, send me an email and I'll get back to you.</p>
+          <div class="contact__actions">
+            <a class="btn btn--bubble" href="mailto:oliverengersand@gmail.com">oliverengersand@gmail.com</a>
+            <a class="btn btn--glass btn--on-light" href="https://www.youtube.com/@Engersand" rel="me">YouTube</a>
+          </div>
+        </div>
+      </div>
+      <span class="bubble bubble--lg" aria-hidden="true"></span>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>© 2026 Oliver Engersand</p>
-    <p>Video editor &amp; filmmaker · Norway</p>
+  <footer class="site-footer surface--night">
+    <div class="strip strip--checker" aria-hidden="true"></div>
+    <div class="site-footer__inner">
+      <p>© 2026 Oliver Engersand</p>
+      <p><a href="https://www.youtube.com/@Engersand" rel="me">youtube.com/@Engersand</a></p>
+      <p>Video editor &amp; filmmaker · Norway</p>
+      <p class="badges" aria-hidden="true"><span>Made by hand</span><span>HTML + CSS</span></p>
+    </div>
   </footer>
 
-  <!-- Photo lightbox -->
   <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title">
-    <div class="lightbox__bar">
-      <p class="lightbox__title" id="lightbox-title">Photography</p>
+    <div class="window__bar lightbox__bar">
+      <p class="window__title" id="lightbox-title">Photography</p>
       <p class="lightbox__count" aria-live="polite"></p>
-      <button class="lightbox__close" type="button" aria-label="Close gallery"><span aria-hidden="true">×</span></button>
+      <button class="lightbox__close btn--orb" type="button" aria-label="Close gallery"><span aria-hidden="true">×</span></button>
     </div>
     <div class="lightbox__stage">
       <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous photo"><span aria-hidden="true">←</span></button>
@@ -222,7 +305,18 @@
       </figure>
       <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next photo"><span aria-hidden="true">→</span></button>
     </div>
-    <div class="lightbox__thumbs" role="list" aria-label="All photos in this series"></div>
+    <ul class="lightbox__thumbs" aria-label="All photos in this series"></ul>
+  </dialog>
+
+  <dialog class="player" id="player" aria-labelledby="player-title">
+    <div class="window window--glass-dark">
+      <div class="window__bar">
+        <p class="window__title" id="player-title">video.mp4</p>
+        <button class="player__close btn--orb" type="button" aria-label="Close video"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="player__frame"></div>
+      <p class="player__foot"><a class="player__out" href="#">Open on YouTube <span aria-hidden="true">↗</span></a></p>
+    </div>
   </dialog>
 </body>
 </html>
