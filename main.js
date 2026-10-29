@@ -1,4 +1,4 @@
-/* Photo galleries and click-to-play videos. No dependencies, relative paths only. */
+/* Photo galleries. Videos are plain links that open YouTube in a new tab. No dependencies, relative paths only. */
 (function () {
   "use strict";
 
@@ -7,165 +7,298 @@
     {
      "src": "assets/photos/street/street-01.webp",
      "thumb": "assets/photos/street/street-01-thumb.webp",
-     "w": 2000,
-     "h": 1333,
-     "alt": "A figure walks down a dim passageway towards a bright courtyard"
+     "w": 2048,
+     "h": 1365,
+     "alt": "Street, photo 1"
     },
     {
      "src": "assets/photos/street/street-02.webp",
      "thumb": "assets/photos/street/street-02-thumb.webp",
-     "w": 2000,
-     "h": 1333,
-     "alt": "Three friends lying on the ground with their skateboards"
+     "w": 2048,
+     "h": 1365,
+     "alt": "Street, photo 2"
     },
     {
      "src": "assets/photos/street/street-03.webp",
      "thumb": "assets/photos/street/street-03-thumb.webp",
-     "w": 2000,
-     "h": 1333,
-     "alt": "Three friends sitting against a concrete wall"
+     "w": 2048,
+     "h": 1365,
+     "alt": "Street, photo 3"
     },
     {
      "src": "assets/photos/street/street-04.webp",
      "thumb": "assets/photos/street/street-04-thumb.webp",
-     "w": 2000,
-     "h": 1333,
-     "alt": "A young man sits on a ledge under a graffiti wall"
+     "w": 2048,
+     "h": 1365,
+     "alt": "Street, photo 4"
     },
     {
      "src": "assets/photos/street/street-05.webp",
      "thumb": "assets/photos/street/street-05-thumb.webp",
-     "w": 2000,
-     "h": 1333,
-     "alt": "Three friends sitting on a ledge with their skateboards"
+     "w": 2048,
+     "h": 1365,
+     "alt": "Street, photo 5"
     },
     {
      "src": "assets/photos/street/street-06.webp",
      "thumb": "assets/photos/street/street-06-thumb.webp",
-     "w": 1333,
-     "h": 2000,
-     "alt": "A skater does a trick on the grass while a friend watches"
+     "w": 1365,
+     "h": 2048,
+     "alt": "Street, photo 6"
     },
     {
      "src": "assets/photos/street/street-07.webp",
      "thumb": "assets/photos/street/street-07-thumb.webp",
-     "w": 1333,
-     "h": 2000,
-     "alt": "Two friends posing on a concrete ramp"
+     "w": 1365,
+     "h": 2048,
+     "alt": "Street, photo 7"
     },
     {
      "src": "assets/photos/street/street-08.webp",
      "thumb": "assets/photos/street/street-08-thumb.webp",
-     "w": 1333,
-     "h": 2000,
-     "alt": "One friend sits up in a birch tree while another stands below"
+     "w": 1365,
+     "h": 2048,
+     "alt": "Street, photo 8"
     },
     {
      "src": "assets/photos/street/street-09.webp",
      "thumb": "assets/photos/street/street-09-thumb.webp",
-     "w": 2000,
-     "h": 1333,
-     "alt": "Two friends messing around on a lawn in front of a brick building"
+     "w": 2048,
+     "h": 1365,
+     "alt": "Street, photo 9"
     },
     {
      "src": "assets/photos/street/street-10.webp",
      "thumb": "assets/photos/street/street-10-thumb.webp",
-     "w": 2000,
-     "h": 1333,
-     "alt": "A skater jumps off his board on the grass"
+     "w": 2048,
+     "h": 1365,
+     "alt": "Street, photo 10"
     },
     {
      "src": "assets/photos/street/street-11.webp",
      "thumb": "assets/photos/street/street-11-thumb.webp",
-     "w": 2000,
-     "h": 1333,
-     "alt": "A school building behind a wide, empty lawn"
+     "w": 2048,
+     "h": 1365,
+     "alt": "Street, photo 11"
+    },
+    {
+     "src": "assets/photos/street/street-12.webp",
+     "thumb": "assets/photos/street/street-12-thumb.webp",
+     "w": 2048,
+     "h": 1365,
+     "alt": "Street, photo 12"
+    },
+    {
+     "src": "assets/photos/street/street-13.webp",
+     "thumb": "assets/photos/street/street-13-thumb.webp",
+     "w": 2048,
+     "h": 1365,
+     "alt": "Street, photo 13"
+    },
+    {
+     "src": "assets/photos/street/street-14.webp",
+     "thumb": "assets/photos/street/street-14-thumb.webp",
+     "w": 2048,
+     "h": 1365,
+     "alt": "Street, photo 14"
+    },
+    {
+     "src": "assets/photos/street/street-15.webp",
+     "thumb": "assets/photos/street/street-15-thumb.webp",
+     "w": 2048,
+     "h": 1365,
+     "alt": "Street, photo 15"
+    },
+    {
+     "src": "assets/photos/street/street-16.webp",
+     "thumb": "assets/photos/street/street-16-thumb.webp",
+     "w": 2048,
+     "h": 1365,
+     "alt": "Street, photo 16"
+    },
+    {
+     "src": "assets/photos/street/street-17.webp",
+     "thumb": "assets/photos/street/street-17-thumb.webp",
+     "w": 2048,
+     "h": 1365,
+     "alt": "Street, photo 17"
+    },
+    {
+     "src": "assets/photos/street/street-18.webp",
+     "thumb": "assets/photos/street/street-18-thumb.webp",
+     "w": 2048,
+     "h": 1365,
+     "alt": "Street, photo 18"
+    },
+    {
+     "src": "assets/photos/street/street-19.webp",
+     "thumb": "assets/photos/street/street-19-thumb.webp",
+     "w": 2048,
+     "h": 1365,
+     "alt": "Street, photo 19"
+    },
+    {
+     "src": "assets/photos/street/street-20.webp",
+     "thumb": "assets/photos/street/street-20-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Street, photo 20"
+    },
+    {
+     "src": "assets/photos/street/street-21.webp",
+     "thumb": "assets/photos/street/street-21-thumb.webp",
+     "w": 2048,
+     "h": 1365,
+     "alt": "Street, photo 21"
+    },
+    {
+     "src": "assets/photos/street/street-22.webp",
+     "thumb": "assets/photos/street/street-22-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Street, photo 22"
+    },
+    {
+     "src": "assets/photos/street/street-23.webp",
+     "thumb": "assets/photos/street/street-23-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Street, photo 23"
+    },
+    {
+     "src": "assets/photos/street/street-24.webp",
+     "thumb": "assets/photos/street/street-24-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Street, photo 24"
     }
    ],
    "fog": [
     {
      "src": "assets/photos/fog/fog-01.webp",
      "thumb": "assets/photos/fog/fog-01-thumb.webp",
-     "w": 1333,
-     "h": 2000,
-     "alt": "A floodlight lights up the fog above a shipping container at night"
+     "w": 1365,
+     "h": 2048,
+     "alt": "Fog, photo 1"
     },
     {
      "src": "assets/photos/fog/fog-02.webp",
      "thumb": "assets/photos/fog/fog-02-thumb.webp",
-     "w": 1333,
-     "h": 2000,
-     "alt": "Streetlights glow through fog on a road with a yellow centre line"
+     "w": 1365,
+     "h": 2048,
+     "alt": "Fog, photo 2"
     },
     {
      "src": "assets/photos/fog/fog-03.webp",
      "thumb": "assets/photos/fog/fog-03-thumb.webp",
-     "w": 1333,
-     "h": 2000,
-     "alt": "A streetlight turns into a bright ball of light in thick fog"
+     "w": 1365,
+     "h": 2048,
+     "alt": "Fog, photo 3"
     },
     {
      "src": "assets/photos/fog/fog-04.webp",
      "thumb": "assets/photos/fog/fog-04-thumb.webp",
-     "w": 1333,
-     "h": 2000,
-     "alt": "Bare trees fading into mist"
+     "w": 1365,
+     "h": 2048,
+     "alt": "Fog, photo 4"
     },
     {
      "src": "assets/photos/fog/fog-05.webp",
      "thumb": "assets/photos/fog/fog-05-thumb.webp",
-     "w": 1333,
-     "h": 2000,
-     "alt": "A lit walkway along a long building at night"
+     "w": 1365,
+     "h": 2048,
+     "alt": "Fog, photo 5"
     },
     {
      "src": "assets/photos/fog/fog-06.webp",
      "thumb": "assets/photos/fog/fog-06-thumb.webp",
-     "w": 1333,
-     "h": 2000,
-     "alt": "Mist drifting between trees in a dark forest"
+     "w": 1365,
+     "h": 2048,
+     "alt": "Fog, photo 6"
     },
     {
      "src": "assets/photos/fog/fog-07.webp",
      "thumb": "assets/photos/fog/fog-07-thumb.webp",
-     "w": 1333,
-     "h": 2000,
-     "alt": "A small stream under bare trees at dusk"
+     "w": 1365,
+     "h": 2048,
+     "alt": "Fog, photo 7"
     },
     {
      "src": "assets/photos/fog/fog-08.webp",
      "thumb": "assets/photos/fog/fog-08-thumb.webp",
-     "w": 1333,
-     "h": 2000,
-     "alt": "A foggy road curving past streetlights at night"
+     "w": 1365,
+     "h": 2048,
+     "alt": "Fog, photo 8"
     },
     {
      "src": "assets/photos/fog/fog-09.webp",
      "thumb": "assets/photos/fog/fog-09-thumb.webp",
-     "w": 1333,
-     "h": 2000,
-     "alt": "A single streetlight above a quiet road in the fog"
+     "w": 1365,
+     "h": 2048,
+     "alt": "Fog, photo 9"
     },
     {
      "src": "assets/photos/fog/fog-10.webp",
      "thumb": "assets/photos/fog/fog-10-thumb.webp",
-     "w": 2000,
-     "h": 1333,
-     "alt": "Light spills across a foggy field at night"
+     "w": 2048,
+     "h": 1365,
+     "alt": "Fog, photo 10"
     },
     {
      "src": "assets/photos/fog/fog-11.webp",
      "thumb": "assets/photos/fog/fog-11-thumb.webp",
-     "w": 2000,
-     "h": 1333,
-     "alt": "Dark trees against glowing fog"
+     "w": 2048,
+     "h": 1365,
+     "alt": "Fog, photo 11"
     },
     {
      "src": "assets/photos/fog/fog-12.webp",
      "thumb": "assets/photos/fog/fog-12-thumb.webp",
-     "w": 1333,
-     "h": 2000,
-     "alt": "Faint streetlights almost lost in the fog"
+     "w": 1365,
+     "h": 2048,
+     "alt": "Fog, photo 12"
+    },
+    {
+     "src": "assets/photos/fog/fog-13.webp",
+     "thumb": "assets/photos/fog/fog-13-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Fog, photo 13"
+    },
+    {
+     "src": "assets/photos/fog/fog-14.webp",
+     "thumb": "assets/photos/fog/fog-14-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Fog, photo 14"
+    },
+    {
+     "src": "assets/photos/fog/fog-15.webp",
+     "thumb": "assets/photos/fog/fog-15-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Fog, photo 15"
+    },
+    {
+     "src": "assets/photos/fog/fog-16.webp",
+     "thumb": "assets/photos/fog/fog-16-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Fog, photo 16"
+    },
+    {
+     "src": "assets/photos/fog/fog-17.webp",
+     "thumb": "assets/photos/fog/fog-17-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Fog, photo 17"
+    },
+    {
+     "src": "assets/photos/fog/fog-18.webp",
+     "thumb": "assets/photos/fog/fog-18-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Fog, photo 18"
     }
    ],
    "bouldering": [
@@ -174,98 +307,196 @@
      "thumb": "assets/photos/bouldering/bouldering-01-thumb.webp",
      "w": 2048,
      "h": 1365,
-     "alt": "A climber reaches across a wall covered in holds"
+     "alt": "Bouldering, photo 1"
     },
     {
      "src": "assets/photos/bouldering/bouldering-02.webp",
      "thumb": "assets/photos/bouldering/bouldering-02-thumb.webp",
      "w": 1365,
      "h": 2048,
-     "alt": "A climber reaches for a purple hold"
+     "alt": "Bouldering, photo 2"
     },
     {
      "src": "assets/photos/bouldering/bouldering-03.webp",
      "thumb": "assets/photos/bouldering/bouldering-03-thumb.webp",
      "w": 1365,
      "h": 2048,
-     "alt": "A climber stretches out between pink and purple volumes"
+     "alt": "Bouldering, photo 3"
     },
     {
      "src": "assets/photos/bouldering/bouldering-04.webp",
      "thumb": "assets/photos/bouldering/bouldering-04-thumb.webp",
      "w": 1365,
      "h": 2048,
-     "alt": "A climber kicks a leg out for balance on a steep wall"
+     "alt": "Bouldering, photo 4"
     },
     {
      "src": "assets/photos/bouldering/bouldering-05.webp",
      "thumb": "assets/photos/bouldering/bouldering-05-thumb.webp",
      "w": 1365,
      "h": 2048,
-     "alt": "A climber moves between big holds on a steep wall"
+     "alt": "Bouldering, photo 5"
     },
     {
      "src": "assets/photos/bouldering/bouldering-06.webp",
      "thumb": "assets/photos/bouldering/bouldering-06-thumb.webp",
      "w": 1365,
      "h": 2048,
-     "alt": "A climber hangs from one hand below a pink volume"
+     "alt": "Bouldering, photo 6"
     },
     {
      "src": "assets/photos/bouldering/bouldering-07.webp",
      "thumb": "assets/photos/bouldering/bouldering-07-thumb.webp",
      "w": 1365,
      "h": 2048,
-     "alt": "A climber hangs under a steep overhang"
+     "alt": "Bouldering, photo 7"
     },
     {
      "src": "assets/photos/bouldering/bouldering-08.webp",
      "thumb": "assets/photos/bouldering/bouldering-08-thumb.webp",
      "w": 2048,
      "h": 1365,
-     "alt": "A climber stretches sideways across the overhang"
+     "alt": "Bouldering, photo 8"
     },
     {
      "src": "assets/photos/bouldering/bouldering-09.webp",
      "thumb": "assets/photos/bouldering/bouldering-09-thumb.webp",
      "w": 1365,
      "h": 2048,
-     "alt": "A climber on the overhang, seen from below"
+     "alt": "Bouldering, photo 9"
     },
     {
      "src": "assets/photos/bouldering/bouldering-10.webp",
      "thumb": "assets/photos/bouldering/bouldering-10-thumb.webp",
      "w": 1365,
      "h": 2048,
-     "alt": "A climber works his way up the edge of a wall full of holds"
+     "alt": "Bouldering, photo 10"
     },
     {
      "src": "assets/photos/bouldering/bouldering-11.webp",
      "thumb": "assets/photos/bouldering/bouldering-11-thumb.webp",
      "w": 1365,
      "h": 2048,
-     "alt": "A climber hangs from the overhang with his feet off the wall"
+     "alt": "Bouldering, photo 11"
     },
     {
      "src": "assets/photos/bouldering/bouldering-12.webp",
      "thumb": "assets/photos/bouldering/bouldering-12-thumb.webp",
      "w": 1365,
      "h": 2048,
-     "alt": "A climber hangs at full stretch from the top of the wall"
+     "alt": "Bouldering, photo 12"
     },
     {
      "src": "assets/photos/bouldering/bouldering-13.webp",
      "thumb": "assets/photos/bouldering/bouldering-13-thumb.webp",
      "w": 1365,
      "h": 2048,
-     "alt": "A climber reaches up on a wall packed with holds"
+     "alt": "Bouldering, photo 13"
     },
     {
      "src": "assets/photos/bouldering/bouldering-14.webp",
      "thumb": "assets/photos/bouldering/bouldering-14-thumb.webp",
      "w": 1365,
      "h": 2048,
-     "alt": "A climber pulls through the holds near the top of the wall"
+     "alt": "Bouldering, photo 14"
+    },
+    {
+     "src": "assets/photos/bouldering/bouldering-15.webp",
+     "thumb": "assets/photos/bouldering/bouldering-15-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Bouldering, photo 15"
+    },
+    {
+     "src": "assets/photos/bouldering/bouldering-16.webp",
+     "thumb": "assets/photos/bouldering/bouldering-16-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Bouldering, photo 16"
+    },
+    {
+     "src": "assets/photos/bouldering/bouldering-17.webp",
+     "thumb": "assets/photos/bouldering/bouldering-17-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Bouldering, photo 17"
+    },
+    {
+     "src": "assets/photos/bouldering/bouldering-18.webp",
+     "thumb": "assets/photos/bouldering/bouldering-18-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Bouldering, photo 18"
+    },
+    {
+     "src": "assets/photos/bouldering/bouldering-19.webp",
+     "thumb": "assets/photos/bouldering/bouldering-19-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Bouldering, photo 19"
+    },
+    {
+     "src": "assets/photos/bouldering/bouldering-20.webp",
+     "thumb": "assets/photos/bouldering/bouldering-20-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Bouldering, photo 20"
+    },
+    {
+     "src": "assets/photos/bouldering/bouldering-21.webp",
+     "thumb": "assets/photos/bouldering/bouldering-21-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Bouldering, photo 21"
+    },
+    {
+     "src": "assets/photos/bouldering/bouldering-22.webp",
+     "thumb": "assets/photos/bouldering/bouldering-22-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Bouldering, photo 22"
+    },
+    {
+     "src": "assets/photos/bouldering/bouldering-23.webp",
+     "thumb": "assets/photos/bouldering/bouldering-23-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Bouldering, photo 23"
+    },
+    {
+     "src": "assets/photos/bouldering/bouldering-24.webp",
+     "thumb": "assets/photos/bouldering/bouldering-24-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Bouldering, photo 24"
+    },
+    {
+     "src": "assets/photos/bouldering/bouldering-25.webp",
+     "thumb": "assets/photos/bouldering/bouldering-25-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Bouldering, photo 25"
+    },
+    {
+     "src": "assets/photos/bouldering/bouldering-26.webp",
+     "thumb": "assets/photos/bouldering/bouldering-26-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Bouldering, photo 26"
+    },
+    {
+     "src": "assets/photos/bouldering/bouldering-27.webp",
+     "thumb": "assets/photos/bouldering/bouldering-27-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Bouldering, photo 27"
+    },
+    {
+     "src": "assets/photos/bouldering/bouldering-28.webp",
+     "thumb": "assets/photos/bouldering/bouldering-28-thumb.webp",
+     "w": 1365,
+     "h": 2048,
+     "alt": "Bouldering, photo 28"
     }
    ]
   };
@@ -284,7 +515,6 @@
   const lb = document.getElementById("lightbox");
   if (lb) {
     const img = lb.querySelector(".lightbox__img");
-    const cap = lb.querySelector(".lightbox__caption");
     const count = lb.querySelector(".lightbox__count");
     const title = lb.querySelector(".lightbox__title");
     const thumbs = lb.querySelector(".lightbox__thumbs");
@@ -297,7 +527,6 @@
       index = (i + list.length) % list.length;
       const p = list[index];
       img.src = p.src; img.alt = p.alt; img.width = p.w; img.height = p.h;
-      cap.textContent = p.alt;
       count.textContent = (index + 1) + " / " + list.length;
       thumbs.querySelectorAll(".lightbox__thumb").forEach(function (b, n) {
         b.setAttribute("aria-current", n === index ? "true" : "false");
@@ -358,47 +587,4 @@
       });
     });
   }
-
-  /* ---------- videos (youtube-nocookie, loaded only on click) ---------- */
-  function iframe(id, title) {
-    const f = document.createElement("iframe");
-    f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&playsinline=1";
-    f.title = title + " (YouTube video)";
-    f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
-    f.allowFullscreen = true;
-    f.referrerPolicy = "strict-origin-when-cross-origin";
-    return f;
-  }
-
-  const player = document.getElementById("player");
-  const frame = player && player.querySelector(".player__frame");
-  if (player) {
-    player.querySelector(".lightbox__close").addEventListener("click", function () { player.close(); });
-    player.addEventListener("close", function () { frame.innerHTML = ""; unlock(); if (opener) opener.focus(); });
-  }
-
-  /* YouTube refuses embeds on pages opened straight from disk (file://), so there the links just go to YouTube */
-  const canEmbed = location.protocol !== "file:";
-
-  document.querySelectorAll("[data-yt]").forEach(function (a) {
-    a.addEventListener("click", function (e) {
-      if (!canEmbed) return;
-      const id = a.dataset.yt, title = a.dataset.title || "Video";
-      if (a.classList.contains("play-link--inline")) {
-        e.preventDefault();
-        a.replaceWith((function () { const w = document.createElement("div"); w.className = "play-link"; w.appendChild(iframe(id, title)); return w; })());
-        return;
-      }
-      if (!player || typeof player.showModal !== "function") return; /* fall back to the YouTube link */
-      e.preventDefault();
-      opener = a;
-      frame.innerHTML = "";
-      frame.classList.toggle("is-vertical", a.hasAttribute("data-vertical"));
-      frame.appendChild(iframe(id, title));
-      player.querySelector(".lightbox__title").textContent = title;
-      player.querySelector(".player__yt").href = a.href;
-      openDialog(player);
-      player.querySelector(".lightbox__close").focus();
-    });
-  });
 })();
