@@ -54,15 +54,42 @@
     const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
     const save = navigator.connection && navigator.connection.saveData;
     const toggle = document.querySelector(".preview-toggle");
+    var fadeSec = 0.4;
+    var running = false;
+    function paintFade() {
+      if (!running) return;
+      if (hv.paused || !hv.duration) { running = false; return; }
+      var edge = Math.min(hv.currentTime, Math.max(0, hv.duration - hv.currentTime));
+      hv.style.opacity = edge >= fadeSec ? "1" : String(Math.max(0, edge / fadeSec));
+      requestAnimationFrame(paintFade);
+    }
+    function startFade() {
+      if (running || calm) return;
+      running = true;
+      requestAnimationFrame(paintFade);
+    }
     if (!calm && !save && hv.dataset.mp4) {
       addEventListener("load", function () {
-        hv.innerHTML = '<source src="' + hv.dataset.webm + '" type="video/webm"><source src="' + hv.dataset.mp4 + '" type="video/mp4">';
+        var markup = "";
+        if (hv.dataset.webm) markup += '<source src="' + hv.dataset.webm + '" type="video/webm">';
+        markup += '<source src="' + hv.dataset.mp4 + '" type="video/mp4">';
+        hv.innerHTML = markup;
+        hv.preload = "metadata";
         hv.load();
         hv.play().catch(function () {});
         if (toggle) toggle.hidden = false;
       });
     }
-    hv.addEventListener("playing", function () { hv.classList.add("is-playing"); });
+    hv.addEventListener("playing", function () {
+      hv.classList.add("is-playing");
+      var screen = hv.closest(".window__screen");
+      if (screen) screen.classList.add("is-live");
+      startFade();
+    });
+    hv.addEventListener("pause", function () {
+      running = false;
+      if (hv.currentTime > 0) hv.style.opacity = "1";
+    });
     if (toggle) {
       toggle.addEventListener("click", function () {
         if (hv.paused) {
