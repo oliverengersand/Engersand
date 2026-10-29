@@ -335,10 +335,6 @@ section[id], #photography { scroll-margin-top: 4.5rem; }
   mask: linear-gradient(90deg, #000, transparent 55%);
 }
 .marquee { position: absolute; left: 0; right: 0; bottom: 0; overflow: hidden; background: var(--night); z-index: 2; }
-.marquee p {
-  display: flex; width: max-content; margin: 0; padding: .85rem 0 .7rem;
-  white-space: nowrap; font: .75rem/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--sky);
-}
 .marquee__track { display: flex; width: max-content; }
 .marquee__group {
   display: flex; flex: none; margin: 0; padding: .85rem 0 .7rem; list-style: none;
@@ -347,8 +343,8 @@ section[id], #photography { scroll-margin-top: 4.5rem; }
 .marquee__group li { flex: none; }
 .marquee__group li::after { content: "\2726"; margin: 0 .9em; }
 @media (prefers-reduced-motion: no-preference) {
-  .marquee p { animation: marquee 40s linear infinite; }
   .marquee__track { animation: marquee 160s linear infinite; will-change: transform; }
+  .page-404 .marquee__track { animation-duration: 40s; }
   @keyframes marquee { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
 }
 
@@ -500,10 +496,12 @@ section[id], #photography { scroll-margin-top: 4.5rem; }
 }
 .preview-toggle[hidden] { display: none; }
 .toast {
-  position: fixed; left: 50%; bottom: 1.5rem; z-index: 50; translate: -50% 0; margin: 0;
+  position: fixed; left: 50%; bottom: 5rem; z-index: 50; translate: -50% 0; margin: 0;
   padding: .6rem 1rem; border-radius: var(--r-pill); background: var(--night); color: var(--paper);
+  border: 1px solid var(--sky);
   font: .8rem/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; box-shadow: 0 6px 24px rgba(0,0,0,.35);
 }
+.toast__address { text-transform: none; }
 
 /* SECTIONS */
 .reel, .work, .about, .contact, .cv { max-width: none; }
@@ -869,4 +867,23 @@ section[id], #photography { scroll-margin-top: 4.5rem; }
   }
   .window--glass { background: var(--glass-light-solid); }
   .site-header { background: var(--glass-dark-solid); }
+}
+
+/* Gradient text is clipped to the line box. Padding keeps descenders inside the paint, and the negative margin gives that space back. */
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .hero__title.chrome-text,
+  .section-title.chrome-text,
+  .page-intro__title.chrome-text {
+    padding-bottom: .16em;
+    margin-bottom: -.16em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+  .about__text .section-title.chrome-text { margin-bottom: calc(1.15rem - .16em); }
+  .hero__title.chrome-text em {
+    padding-bottom: .14em;
+    margin-bottom: -.14em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
 }

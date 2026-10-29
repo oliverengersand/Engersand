@@ -49,7 +49,8 @@
     });
   }
 
-  /* Hero preview. Empty data-mp4 keeps the poster until a clip exists. */
+  /* Hero preview. The still is the poster image, so it can be the LCP element.
+     The clip src is attached only after window load. Reduced motion and data saver never load it. */
   const hv = document.querySelector(".hero__video");
   if (hv) {
     const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -71,6 +72,7 @@
     }
     if (!calm && !save && hv.dataset.mp4) {
       addEventListener("load", function () {
+        if (hv.getAttribute("src") || hv.querySelector("source")) return;
         var markup = "";
         if (hv.dataset.webm) markup += '<source src="' + hv.dataset.webm + '" type="video/webm">';
         markup += '<source src="' + hv.dataset.mp4 + '" type="video/mp4">';
@@ -274,9 +276,15 @@
   /* Copy email fallback for machines with no mail app. */
   const toast = document.querySelector(".toast");
   let toastTimer = 0;
-  function say(msg) {
+  function say(prefix, address) {
     if (!toast) return;
-    toast.textContent = msg;
+    toast.replaceChildren(document.createTextNode(prefix));
+    if (address) {
+      const addr = document.createElement("span");
+      addr.className = "toast__address";
+      addr.textContent = address;
+      toast.appendChild(addr);
+    }
     toast.hidden = false;
     clearTimeout(toastTimer);
     toastTimer = setTimeout(function () { toast.hidden = true; }, 2200);
@@ -299,8 +307,8 @@
   document.querySelectorAll("[data-copy]").forEach(function (b) {
     b.addEventListener("click", function () {
       copyText(b.dataset.copy).then(
-        function () { say("Copied " + b.dataset.copy); },
-        function () { say("Couldn't copy. The address is " + b.dataset.copy); }
+        function () { say("Copied ", b.dataset.copy); },
+        function () { say("Couldn't copy. The address is ", b.dataset.copy); }
       );
     });
   });
