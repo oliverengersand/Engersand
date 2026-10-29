@@ -156,6 +156,41 @@
   });
 }
 
+  /* Work section depth parallax. Layers move slower than the page (data-speed x scroll).
+     CSS scroll timeline when supported, otherwise one rAF scroll handler while in view. */
+  const workBg = document.querySelector(".work-bg");
+  if (workBg && "IntersectionObserver" in window &&
+      !matchMedia("(prefers-reduced-motion: reduce)").matches &&
+      !(window.CSS && CSS.supports("animation-timeline: view()"))) {
+    const workSec = workBg.parentElement;
+    const layers = Array.prototype.slice.call(workBg.querySelectorAll("[data-speed]"));
+    const small = matchMedia("(max-width: 760px)");
+    let inView = false;
+    let queued = false;
+    workBg.classList.add("work-bg--live");
+    function paintDepth() {
+      queued = false;
+      if (small.matches) { layers.forEach(function (l) { l.style.transform = ""; }); return; }
+      const r = workSec.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const span = vh + r.height;
+      const done = Math.max(0, Math.min(span, vh - r.top));
+      layers.forEach(function (l) {
+        const lag = 1 - Number(l.dataset.speed);
+        l.style.transform = "translate3d(0," + (lag * (done - span / 2)).toFixed(1) + "px,0)";
+      });
+    }
+    function queueDepth() {
+      if (!queued) { queued = true; requestAnimationFrame(paintDepth); }
+    }
+    new IntersectionObserver(function (entries) {
+      inView = entries[0].isIntersecting;
+      if (inView) { window.addEventListener("scroll", queueDepth, { passive: true }); queueDepth(); }
+      else window.removeEventListener("scroll", queueDepth);
+    }).observe(workSec);
+    window.addEventListener("resize", function () { if (inView) queueDepth(); }, { passive: true });
+  }
+
   /* Photo lightbox */
   const lb = document.getElementById("lightbox");
   if (lb) {

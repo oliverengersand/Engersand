@@ -887,3 +887,130 @@ section[id], #photography { scroll-margin-top: 4.5rem; }
     box-decoration-break: clone;
   }
 }
+
+
+/* ==== Work section depth background (parallax) ==== */
+/* Every layer moves SLOWER than the page: far 0.35x, mid 0.55x, near 0.75x, cards 1x. */
+.work { position: relative; isolation: isolate; overflow: clip; }
+.work__inner { position: relative; z-index: 1; }
+.work-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; contain: strict; }
+.work-bg__layer { position: absolute; left: 0; right: 0; top: 0; height: 100%; }
+.work-bg__layer > * { position: absolute; display: block; }
+.work-bg__far { --s: .35; }
+.work-bg__mid { --s: .55; }
+.work-bg__near { --s: .75; }
+
+/* Far: cobalt grid strongest in the gutters, halftone corners, perspective floor, outline numeral */
+.work-bg__grid {
+  inset: 0;
+  background:
+    linear-gradient(rgba(14,21,228,.14) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(90deg, rgba(14,21,228,.14) 1px, transparent 1px) 0 0 / 48px 48px;
+  -webkit-mask: linear-gradient(90deg, #000, #000 6%, rgba(0,0,0,.3) 20%, rgba(0,0,0,.3) 80%, #000 94%, #000);
+          mask: linear-gradient(90deg, #000, #000 6%, rgba(0,0,0,.3) 20%, rgba(0,0,0,.3) 80%, #000 94%, #000);
+}
+.work-bg__dots {
+  inset: 0; opacity: .85;
+  background: radial-gradient(rgba(14,21,228,.28) 1px, transparent 1.6px) 0 0 / 9px 9px;
+  -webkit-mask: radial-gradient(circle at 100% 8%, #000, transparent 32%), radial-gradient(circle at 0% 92%, #000, transparent 30%);
+          mask: radial-gradient(circle at 100% 8%, #000, transparent 32%), radial-gradient(circle at 0% 92%, #000, transparent 30%);
+}
+.work-bg__floor {
+  left: -10%; right: -10%; bottom: 0; height: 360px; transform-origin: 50% 100%;
+  transform: perspective(520px) rotateX(62deg);
+  background:
+    linear-gradient(rgba(14,21,228,.22) 1px, transparent 1px) 0 0 / 64px 40px,
+    linear-gradient(90deg, rgba(14,21,228,.22) 1px, transparent 1px) 0 0 / 64px 40px;
+  -webkit-mask: linear-gradient(transparent, #000 70%); mask: linear-gradient(transparent, #000 70%);
+}
+.work-bg__numeral {
+  right: -3vw; top: 30%; font: 400 clamp(12rem, 24vw, 22rem)/.8 var(--serif);
+  color: transparent; -webkit-text-stroke: 1.5px rgba(14,21,228,.16); letter-spacing: -.04em;
+}
+
+/* Mid: soft cobalt and sky orbs plus a chrome ring, in the gutters */
+.work-bg__orb { border-radius: 50%; width: 46vw; aspect-ratio: 1; max-width: 760px; }
+.work-bg__orb--a { left: -24vw; top: 8%; background: radial-gradient(circle, rgba(70,137,220,.34), rgba(158,193,226,.18) 38%, transparent 68%); }
+.work-bg__orb--b { right: -26vw; top: 44%; background: radial-gradient(circle, rgba(14,21,228,.26), rgba(70,137,220,.12) 40%, transparent 68%); }
+.work-bg__orb--c { left: 30%; bottom: -18vw; width: 40vw; background: radial-gradient(circle, rgba(158,193,226,.30), transparent 66%); }
+.work-bg__ring {
+  left: -90px; top: 50%; width: 260px; aspect-ratio: 1; border-radius: 50%; opacity: .5;
+  background: radial-gradient(circle, transparent 54%, #fff 56%, #92A4C7 60%, #334A74 63%, #E1ECF3 67%, #92A4C7 70%, transparent 72%);
+}
+
+/* Near: sparkles, brackets, data labels, a tick ruler */
+.work-bg__spark { fill: var(--blue); opacity: .8; width: 22px; height: 22px; }
+.work-bg__spark--1 { left: calc(var(--pad) * .35); top: 22%; }
+.work-bg__spark--2 { right: calc(var(--pad) * .3); top: 41%; width: 30px; height: 30px; opacity: .6; }
+.work-bg__spark--3 { left: calc(var(--pad) * .45); top: 68%; width: 14px; height: 14px; }
+.work-bg__spark--4 { right: calc(var(--pad) * .5); top: 84%; width: 16px; height: 16px; opacity: .65; }
+.work-bg__spark--big { right: -34px; top: 10%; width: 120px; height: 120px; opacity: .22; }
+.work-bg__bracket { width: 28px; height: 28px; border: 1.5px solid rgba(14,21,228,.45); }
+.work-bg__bracket--tl { left: 14px; top: 18px; border-right: 0; border-bottom: 0; }
+.work-bg__bracket--br { right: 14px; bottom: 18px; border-left: 0; border-top: 0; }
+.work-bg__tag {
+  font: .625rem/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: rgba(14,21,228,.62);
+  writing-mode: vertical-rl; white-space: nowrap;
+}
+.work-bg__tag--l { left: calc(var(--pad) * .4); top: 8%; transform: rotate(180deg); }
+.work-bg__tag--r { right: calc(var(--pad) * .4); top: 56%; }
+.work-bg__tag--b { left: calc(var(--pad) * .4); top: 78%; transform: rotate(180deg); }
+.work-bg__ruler {
+  right: calc(var(--pad) * .42); top: 24%; width: 7px; height: 14%;
+  background: repeating-linear-gradient(180deg, rgba(14,21,228,.4) 0 1px, transparent 1px 8px);
+  -webkit-mask: linear-gradient(transparent, #000 20%, #000 80%, transparent); mask: linear-gradient(transparent, #000 20%, #000 80%, transparent);
+}
+
+/* Static scanline ticks on the section edges */
+.work-bg__edge {
+  position: absolute; left: 0; right: 0; height: 8px; opacity: .55;
+  background: repeating-linear-gradient(90deg, var(--blue) 0 2px, transparent 2px 7px);
+  -webkit-mask: linear-gradient(90deg, #000, transparent 22%, transparent 78%, #000); mask: linear-gradient(90deg, #000, transparent 22%, transparent 78%, #000);
+}
+.work-bg__edge--top { top: 0; }
+.work-bg__edge--bottom { bottom: 0; }
+
+/* Live parallax sizing. Each layer becomes the band of itself that can ever be seen:
+   height = s*H + (1-s)*100vh, centred on the section. Across the section's view range it then
+   travels (1-s)*(100vh + H), which makes it move at exactly s times the scroll speed.
+   The travel is written in terms of the layer's own height L: A = (1-s)/(2s)*L + (1-s)(2s-1)/(2s)*100vh. */
+.work-bg--live .work-bg__layer {
+  top: calc((1 - var(--s)) * (100% - 100vh) / 2);
+  height: calc(var(--s) * 100% + (1 - var(--s)) * 100vh);
+  will-change: transform;
+}
+@media (prefers-reduced-motion: no-preference) and (min-width: 761px) {
+  @supports (animation-timeline: view()) {
+    .work { view-timeline: --work block; }
+    .work-bg { --live: 1; }
+    .work-bg .work-bg__layer {
+      top: calc((1 - var(--s)) * (100% - 100vh) / 2);
+      height: calc(var(--s) * 100% + (1 - var(--s)) * 100vh);
+      will-change: transform;
+      --a: calc((1 - var(--s)) / (2 * var(--s)) * 100% + (1 - var(--s)) * (2 * var(--s) - 1) / (2 * var(--s)) * 100vh);
+      animation: work-depth linear both; animation-timeline: --work; animation-range: cover;
+    }
+    @keyframes work-depth {
+      from { transform: translate3d(0, calc(var(--a) * -1), 0); }
+      to { transform: translate3d(0, var(--a), 0); }
+    }
+  }
+}
+
+/* Mobile: static and lighter, gutters are too narrow for labels */
+@media (max-width: 760px) {
+  .work-bg .work-bg__layer { top: 0; height: 100%; will-change: auto; transform: none !important; animation: none; }
+  .work-bg__orb--b, .work-bg__orb--c, .work-bg__ring, .work-bg__numeral, .work-bg__floor,
+  .work-bg__tag, .work-bg__ruler, .work-bg__spark--2, .work-bg__spark--3, .work-bg__spark--4, .work-bg__bracket { display: none !important; }
+  .work-bg__orb--a { width: 90vw; left: -45vw; top: 4%; }
+  .work-bg__grid { -webkit-mask: linear-gradient(#000, transparent 18%, transparent 82%, #000); mask: linear-gradient(#000, transparent 18%, transparent 82%, #000); }
+  .work-bg__spark--1 { left: auto; right: 4px; top: 34%; width: 12px; height: 12px; }
+  .work-bg__spark--big { right: -44px; top: 46%; width: 90px; height: 90px; }
+}
+
+/* Keep the section heading on a clean paper halo so text contrast is unchanged */
+.work .section-head { position: relative; }
+.work .section-head::before {
+  content: ""; position: absolute; inset: -.5rem -.75rem; z-index: -1; pointer-events: none;
+  background: var(--paper); border-radius: 1.5rem; box-shadow: 0 0 28px 20px var(--paper);
+}
