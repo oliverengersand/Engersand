@@ -18,7 +18,7 @@
   function loadGalleries() {
     if (galleries) return Promise.resolve(galleries);
     if (window.GALLERIES) { galleries = window.GALLERIES; return Promise.resolve(galleries); }
-    return fetch("assets/photos/galleries.json").then(function (r) {
+    return fetch("assets/photos/galleries.json?v=20261113b").then(function (r) {
       if (!r.ok) throw new Error("gallery");
       return r.json();
     }).then(function (data) {

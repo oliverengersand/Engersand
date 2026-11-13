@@ -47,3 +47,4 @@ Type: Instrument Serif for display, Space Grotesk for body and buttons, JetBrain
 - Homesync stays text only. No images, video or logo.
 - Hjemmeløs gutten stays off the site.
 - Do not link `about.html` until Oliver approves that page.
+- Bump the shared `?v=` string on styles.css, main.js, galleries.js and galleries.json whenever those files change.
