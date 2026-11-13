@@ -2,47 +2,20 @@
 window.GALLERIES = {
  "street": [
   {
-   "src": "assets/photos/street/street-01.webp",
-   "thumb": "assets/photos/street/street-01-thumb.webp",
-   "w": 2048,
-   "h": 1365,
-   "alt": "Street, photo 1",
-   "src1280": "assets/photos/street/street-01-1280.webp",
-   "micro": "assets/photos/street/street-01-micro.webp"
-  },
-  {
    "src": "assets/photos/street/street-02.webp",
    "thumb": "assets/photos/street/street-02-thumb.webp",
    "w": 2048,
    "h": 1365,
-   "alt": "Street, photo 2",
+   "alt": "Street, photo 1",
    "src1280": "assets/photos/street/street-02-1280.webp",
    "micro": "assets/photos/street/street-02-micro.webp"
-  },
-  {
-   "src": "assets/photos/street/street-03.webp",
-   "thumb": "assets/photos/street/street-03-thumb.webp",
-   "w": 2048,
-   "h": 1365,
-   "alt": "Street, photo 3",
-   "src1280": "assets/photos/street/street-03-1280.webp",
-   "micro": "assets/photos/street/street-03-micro.webp"
-  },
-  {
-   "src": "assets/photos/street/street-04.webp",
-   "thumb": "assets/photos/street/street-04-thumb.webp",
-   "w": 2048,
-   "h": 1365,
-   "alt": "Street, photo 4",
-   "src1280": "assets/photos/street/street-04-1280.webp",
-   "micro": "assets/photos/street/street-04-micro.webp"
   },
   {
    "src": "assets/photos/street/street-05.webp",
    "thumb": "assets/photos/street/street-05-thumb.webp",
    "w": 2048,
    "h": 1365,
-   "alt": "Street, photo 5",
+   "alt": "Street, photo 2",
    "src1280": "assets/photos/street/street-05-1280.webp",
    "micro": "assets/photos/street/street-05-micro.webp"
   },
@@ -51,7 +24,7 @@ window.GALLERIES = {
    "thumb": "assets/photos/street/street-06-thumb.webp",
    "w": 1365,
    "h": 2048,
-   "alt": "Street, photo 6",
+   "alt": "Street, photo 3",
    "src1280": "assets/photos/street/street-06-1280.webp",
    "micro": "assets/photos/street/street-06-micro.webp"
   },
@@ -60,25 +33,16 @@ window.GALLERIES = {
    "thumb": "assets/photos/street/street-07-thumb.webp",
    "w": 1365,
    "h": 2048,
-   "alt": "Street, photo 7",
+   "alt": "Street, photo 4",
    "src1280": "assets/photos/street/street-07-1280.webp",
    "micro": "assets/photos/street/street-07-micro.webp"
-  },
-  {
-   "src": "assets/photos/street/street-08.webp",
-   "thumb": "assets/photos/street/street-08-thumb.webp",
-   "w": 1365,
-   "h": 2048,
-   "alt": "Street, photo 8",
-   "src1280": "assets/photos/street/street-08-1280.webp",
-   "micro": "assets/photos/street/street-08-micro.webp"
   },
   {
    "src": "assets/photos/street/street-09.webp",
    "thumb": "assets/photos/street/street-09-thumb.webp",
    "w": 2048,
    "h": 1365,
-   "alt": "Street, photo 9",
+   "alt": "Street, photo 5",
    "src1280": "assets/photos/street/street-09-1280.webp",
    "micro": "assets/photos/street/street-09-micro.webp"
   },
@@ -87,7 +51,7 @@ window.GALLERIES = {
    "thumb": "assets/photos/street/street-10-thumb.webp",
    "w": 2048,
    "h": 1365,
-   "alt": "Street, photo 10",
+   "alt": "Street, photo 6",
    "src1280": "assets/photos/street/street-10-1280.webp",
    "micro": "assets/photos/street/street-10-micro.webp"
   },
@@ -96,61 +60,25 @@ window.GALLERIES = {
    "thumb": "assets/photos/street/street-11-thumb.webp",
    "w": 2048,
    "h": 1365,
-   "alt": "Street, photo 11",
+   "alt": "Street, photo 7",
    "src1280": "assets/photos/street/street-11-1280.webp",
    "micro": "assets/photos/street/street-11-micro.webp"
-  },
-  {
-   "src": "assets/photos/street/street-12.webp",
-   "thumb": "assets/photos/street/street-12-thumb.webp",
-   "w": 2048,
-   "h": 1365,
-   "alt": "Street, photo 12",
-   "src1280": "assets/photos/street/street-12-1280.webp",
-   "micro": "assets/photos/street/street-12-micro.webp"
-  },
-  {
-   "src": "assets/photos/street/street-13.webp",
-   "thumb": "assets/photos/street/street-13-thumb.webp",
-   "w": 2048,
-   "h": 1365,
-   "alt": "Street, photo 13",
-   "src1280": "assets/photos/street/street-13-1280.webp",
-   "micro": "assets/photos/street/street-13-micro.webp"
   },
   {
    "src": "assets/photos/street/street-14.webp",
    "thumb": "assets/photos/street/street-14-thumb.webp",
    "w": 2048,
    "h": 1365,
-   "alt": "Street, photo 14",
+   "alt": "Street, photo 8",
    "src1280": "assets/photos/street/street-14-1280.webp",
    "micro": "assets/photos/street/street-14-micro.webp"
-  },
-  {
-   "src": "assets/photos/street/street-15.webp",
-   "thumb": "assets/photos/street/street-15-thumb.webp",
-   "w": 2048,
-   "h": 1365,
-   "alt": "Street, photo 15",
-   "src1280": "assets/photos/street/street-15-1280.webp",
-   "micro": "assets/photos/street/street-15-micro.webp"
-  },
-  {
-   "src": "assets/photos/street/street-16.webp",
-   "thumb": "assets/photos/street/street-16-thumb.webp",
-   "w": 2048,
-   "h": 1365,
-   "alt": "Street, photo 16",
-   "src1280": "assets/photos/street/street-16-1280.webp",
-   "micro": "assets/photos/street/street-16-micro.webp"
   },
   {
    "src": "assets/photos/street/street-17.webp",
    "thumb": "assets/photos/street/street-17-thumb.webp",
    "w": 2048,
    "h": 1365,
-   "alt": "Street, photo 17",
+   "alt": "Street, photo 9",
    "src1280": "assets/photos/street/street-17-1280.webp",
    "micro": "assets/photos/street/street-17-micro.webp"
   },
@@ -159,43 +87,16 @@ window.GALLERIES = {
    "thumb": "assets/photos/street/street-18-thumb.webp",
    "w": 2048,
    "h": 1365,
-   "alt": "Street, photo 18",
+   "alt": "Street, photo 10",
    "src1280": "assets/photos/street/street-18-1280.webp",
    "micro": "assets/photos/street/street-18-micro.webp"
-  },
-  {
-   "src": "assets/photos/street/street-19.webp",
-   "thumb": "assets/photos/street/street-19-thumb.webp",
-   "w": 2048,
-   "h": 1365,
-   "alt": "Street, photo 19",
-   "src1280": "assets/photos/street/street-19-1280.webp",
-   "micro": "assets/photos/street/street-19-micro.webp"
-  },
-  {
-   "src": "assets/photos/street/street-20.webp",
-   "thumb": "assets/photos/street/street-20-thumb.webp",
-   "w": 1365,
-   "h": 2048,
-   "alt": "Street, photo 20",
-   "src1280": "assets/photos/street/street-20-1280.webp",
-   "micro": "assets/photos/street/street-20-micro.webp"
-  },
-  {
-   "src": "assets/photos/street/street-21.webp",
-   "thumb": "assets/photos/street/street-21-thumb.webp",
-   "w": 2048,
-   "h": 1365,
-   "alt": "Street, photo 21",
-   "src1280": "assets/photos/street/street-21-1280.webp",
-   "micro": "assets/photos/street/street-21-micro.webp"
   },
   {
    "src": "assets/photos/street/street-22.webp",
    "thumb": "assets/photos/street/street-22-thumb.webp",
    "w": 1365,
    "h": 2048,
-   "alt": "Street, photo 22",
+   "alt": "Street, photo 11",
    "src1280": "assets/photos/street/street-22-1280.webp",
    "micro": "assets/photos/street/street-22-micro.webp"
   },
@@ -204,7 +105,7 @@ window.GALLERIES = {
    "thumb": "assets/photos/street/street-23-thumb.webp",
    "w": 1365,
    "h": 2048,
-   "alt": "Street, photo 23",
+   "alt": "Street, photo 12",
    "src1280": "assets/photos/street/street-23-1280.webp",
    "micro": "assets/photos/street/street-23-micro.webp"
   },
@@ -213,7 +114,7 @@ window.GALLERIES = {
    "thumb": "assets/photos/street/street-24-thumb.webp",
    "w": 1365,
    "h": 2048,
-   "alt": "Street, photo 24",
+   "alt": "Street, photo 13",
    "src1280": "assets/photos/street/street-24-1280.webp",
    "micro": "assets/photos/street/street-24-micro.webp"
   },
@@ -222,7 +123,7 @@ window.GALLERIES = {
    "thumb": "assets/photos/street/street-25-thumb.webp",
    "w": 1365,
    "h": 2048,
-   "alt": "Street, photo 25",
+   "alt": "Street, photo 14",
    "src1280": "assets/photos/street/street-25-1280.webp",
    "micro": "assets/photos/street/street-25-micro.webp"
   },
@@ -231,7 +132,7 @@ window.GALLERIES = {
    "thumb": "assets/photos/street/street-26-thumb.webp",
    "w": 1365,
    "h": 2048,
-   "alt": "Street, photo 26",
+   "alt": "Street, photo 15",
    "src1280": "assets/photos/street/street-26-1280.webp",
    "micro": "assets/photos/street/street-26-micro.webp"
   },
@@ -240,7 +141,7 @@ window.GALLERIES = {
    "thumb": "assets/photos/street/street-27-thumb.webp",
    "w": 1365,
    "h": 2048,
-   "alt": "Street, photo 27",
+   "alt": "Street, photo 16",
    "src1280": "assets/photos/street/street-27-1280.webp",
    "micro": "assets/photos/street/street-27-micro.webp"
   },
@@ -249,7 +150,7 @@ window.GALLERIES = {
    "thumb": "assets/photos/street/street-28-thumb.webp",
    "w": 2048,
    "h": 1365,
-   "alt": "Street, photo 28",
+   "alt": "Street, photo 17",
    "src1280": "assets/photos/street/street-28-1280.webp",
    "micro": "assets/photos/street/street-28-micro.webp"
   },
@@ -258,7 +159,7 @@ window.GALLERIES = {
    "thumb": "assets/photos/street/street-29-thumb.webp",
    "w": 2048,
    "h": 1365,
-   "alt": "Street, photo 29",
+   "alt": "Street, photo 18",
    "src1280": "assets/photos/street/street-29-1280.webp",
    "micro": "assets/photos/street/street-29-micro.webp"
   }
