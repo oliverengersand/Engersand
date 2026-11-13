@@ -2,11 +2,20 @@
 window.GALLERIES = {
  "street": [
   {
+   "src": "assets/photos/street/street-10.webp",
+   "thumb": "assets/photos/street/street-10-thumb.webp",
+   "w": 2048,
+   "h": 1365,
+   "alt": "Street, photo 1",
+   "src1280": "assets/photos/street/street-10-1280.webp",
+   "micro": "assets/photos/street/street-10-micro.webp"
+  },
+  {
    "src": "assets/photos/street/street-02.webp",
    "thumb": "assets/photos/street/street-02-thumb.webp",
    "w": 2048,
    "h": 1365,
-   "alt": "Street, photo 1",
+   "alt": "Street, photo 2",
    "src1280": "assets/photos/street/street-02-1280.webp",
    "micro": "assets/photos/street/street-02-micro.webp"
   },
@@ -15,7 +24,7 @@ window.GALLERIES = {
    "thumb": "assets/photos/street/street-05-thumb.webp",
    "w": 2048,
    "h": 1365,
-   "alt": "Street, photo 2",
+   "alt": "Street, photo 3",
    "src1280": "assets/photos/street/street-05-1280.webp",
    "micro": "assets/photos/street/street-05-micro.webp"
   },
@@ -24,7 +33,7 @@ window.GALLERIES = {
    "thumb": "assets/photos/street/street-06-thumb.webp",
    "w": 1365,
    "h": 2048,
-   "alt": "Street, photo 3",
+   "alt": "Street, photo 4",
    "src1280": "assets/photos/street/street-06-1280.webp",
    "micro": "assets/photos/street/street-06-micro.webp"
   },
@@ -33,7 +42,7 @@ window.GALLERIES = {
    "thumb": "assets/photos/street/street-07-thumb.webp",
    "w": 1365,
    "h": 2048,
-   "alt": "Street, photo 4",
+   "alt": "Street, photo 5",
    "src1280": "assets/photos/street/street-07-1280.webp",
    "micro": "assets/photos/street/street-07-micro.webp"
   },
@@ -42,18 +51,9 @@ window.GALLERIES = {
    "thumb": "assets/photos/street/street-09-thumb.webp",
    "w": 2048,
    "h": 1365,
-   "alt": "Street, photo 5",
+   "alt": "Street, photo 6",
    "src1280": "assets/photos/street/street-09-1280.webp",
    "micro": "assets/photos/street/street-09-micro.webp"
-  },
-  {
-   "src": "assets/photos/street/street-10.webp",
-   "thumb": "assets/photos/street/street-10-thumb.webp",
-   "w": 2048,
-   "h": 1365,
-   "alt": "Street, photo 6",
-   "src1280": "assets/photos/street/street-10-1280.webp",
-   "micro": "assets/photos/street/street-10-micro.webp"
   },
   {
    "src": "assets/photos/street/street-11.webp",
